@@ -1,38 +1,29 @@
 const itemInput = document.getElementById('item-input');
+const onKeyPress=(e)=>{
+    console.log('Keypress');
+}
 
-const onKeyPress = (e) => {
-  console.log('keypress');
-};
+const onKeyUp=(e)=>{
+    console.log('keyup');
+}
 
-const onkeyUp = (e) => {
-  console.log('Keyup');
-};
+const onKeyDown=(e)=>{
+    //key
+    //document.querySelector("h1").innerHTML = e.key;
+    if(e.key==="Enter"){
+        alert("You pressed enter");
+    }
+ //keyCode
+    if(e.key===13){
+        alert("You pressed enter");
+    }
 
-const onkeyDown = (e) => {
-  console.log('Keydown');
-};
-
-const gameKey = (e) => {
-  //key
-  // if (e.key === 'Enter') {
-  //   alert('You pressed enter');
-  // }
-
-  //keycode
-  //https://www.toptal.com/developers/keycode/table
-
-  if (e.keyCode === 13) {
-    alert('You pressed enter');
-  }
-
-  //code
-  if (e.code === 'Digit1') {
-    console.log(e.code);
-  }
-};
+    //code
+    if(e.code==="Digit1"){
+        alert("You pressed #1 key");
+    }
+}
 
 // itemInput.addEventListener('keypress', onKeyPress);
-// itemInput.addEventListener('keyup', onkeyUp);
-//itemInput.addEventListener('keydown', onkeyDown);
-
-itemInput.addEventListener('keydown', gameKey);
+// itemInput.addEventListener('keyup', onKeyUp);
+itemInput.addEventListener('keydown', onKeyDown);

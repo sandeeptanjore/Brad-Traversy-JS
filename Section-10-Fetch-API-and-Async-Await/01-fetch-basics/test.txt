@@ -1,0 +1,1 @@
+This is a test cum text file to test out with the Fetch API
